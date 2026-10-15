@@ -4,6 +4,12 @@ from dotenv import load_dotenv
 import time
 load_dotenv()
 client = genai.Client()
+st.set_page_config(
+    page_title="Travel Assistant",
+    page_icon="🧳",
+    layout="wide",
+    
+)
 st.title("🧳Travel Assistant 🗺")
 dest= st.text_input("✈️ Where to?")
 days= st.number_input("⌛️ How long does this trip last?", min_value=1, max_value=20)
